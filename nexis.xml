@@ -4,7 +4,6 @@
 
   <remote name="digi"  fetch="https://github.com/digi-embedded"/>
   <remote name="fsl"   fetch="https://github.com/Freescale"/>
-  <remote name="qt5"   fetch="https://github.com/meta-qt5"/>
   <remote name="swu"   fetch="https://github.com/sbabic"/>
   <remote name="oe"    fetch="git://git.openembedded.org"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org"/>
@@ -16,7 +15,6 @@
   <project name="meta-freescale.git"    path="sources/meta-freescale"    remote="yocto" revision="thud"/>
   <project name="meta-fsl-demos.git"    path="sources/meta-fsl-demos"    remote="fsl"   revision="thud"/>
   <project name="yocto-meta-openembedded" path="sources/meta-openembedded" remote="intec"    revision="nexis-thud"/>
-  <project name="meta-qt5.git"          path="sources/meta-qt5"          remote="qt5"   revision="thud"/>
   <project name="meta-swupdate.git"     path="sources/meta-swupdate"     remote="swu"   revision="bfe8133749c8bd444aab2372f1dd737eb35454c3"/>
   <project name="yocto-poky"              path="sources/poky"              remote="intec" revision="nexis-thud"/>
   <project name="yocto-meta-addons-nexis" path="sources/meta-addons-nexis" remote="intec" revision="nexis-thud">
