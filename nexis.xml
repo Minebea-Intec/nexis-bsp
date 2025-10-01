@@ -7,17 +7,17 @@
   <remote name="swu"   fetch="https://github.com/sbabic"/>
   <remote name="oe"    fetch="git://git.openembedded.org"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org"/>
-  <remote name="intec" fetch="https://Minebea-Intec@dev.azure.com/Minebea-Intec/NexIS/_git"/>
+  <remote name="intec" fetch="https://github.com/Minebea-Intec"/>
 
-  <project name="yocto-meta-digi" path="sources/meta-digi" remote="intec" revision="nexis-thud">
+  <project name="nexis-meta-digi" path="sources/meta-digi" remote="intec" revision="nexis-thud">
     <copyfile src="sdk/mkproject.sh" dest="mkproject.sh"/>
   </project>
   <project name="meta-freescale.git"    path="sources/meta-freescale"    remote="yocto" revision="thud"/>
   <project name="meta-fsl-demos.git"    path="sources/meta-fsl-demos"    remote="fsl"   revision="thud"/>
-  <project name="yocto-meta-openembedded" path="sources/meta-openembedded" remote="intec"    revision="nexis-thud"/>
+  <project name="nexis-open-embedded.git" path="sources/meta-openembedded" remote="intec"    revision="nexis-thud"/>
   <project name="meta-swupdate.git"     path="sources/meta-swupdate"     remote="swu"   revision="bfe8133749c8bd444aab2372f1dd737eb35454c3"/>
-  <project name="yocto-poky"              path="sources/poky"              remote="intec" revision="nexis-thud"/>
-  <project name="yocto-meta-addons-nexis" path="sources/meta-addons-nexis" remote="intec" revision="nexis-thud">
+  <project name="nexis-poky.git"              path="sources/poky"              remote="intec" revision="nexis-thud"/>
+  <project name="nexis-meta-addons.git" path="sources/meta-addons-nexis" remote="intec" revision="nexis-thud-gh">
     <copyfile src="sdk/nexisconf.sh" dest="nexisconf.sh"/>
     <copyfile src="sdk/Docker/run.sh" dest="run.sh"/>
     <copyfile src="sdk/Docker/cibuild.sh" dest="cibuild.sh"/>
