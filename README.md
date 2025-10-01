@@ -1,41 +1,44 @@
-Digi Embedded Yocto (DEY) manifest
-==================================
+Digi Embedded Yocto manifest for Nexis
+======================================
 
-This repository contains the manifest files for the Digi Embedded Yocto
-distribution for [Digi's Embedded modules](https://www.digi.com/products/embedded-systems).
+This repository contains the manifest file for the Nexis Yocto Linux.
 
-Installing Digi Embedded Yocto
-------------------------------
 
-To download Digi Embedded Yocto, you need the repo tool.
+Building the Linux Distribution
+-------------------------------
 
-Follow these steps to install Digi Embedded Yocto:
-
-1. Download repo to a directory within your path and add execution permissions.
+1. Download repo tool to a directory within your path and add execution permissions.
 
     ```
     $ sudo curl -o /usr/local/bin/repo http://commondatastorage.googleapis.com/git-repo-downloads/repo
     $ sudo chmod a+x /usr/local/bin/repo
     ```
 
-2. Create an installation folder with user write permissions; for example,
-    `/usr/local/dey-2.6` and navigate to that folder.
+2. Create a working dir.
 
     ```
-    $ sudo install -o <your-user> -g <your-group> -d /usr/local/dey-2.6
-    $ cd /usr/local/dey-2.6
+    $ mkdir nexis
+    $ cd nexis
     ```
 
-    Note: You can get your primary user and group using the `id` command.
-
-3. Use repo to download Digi Embedded Yocto.
+3. Use repo to download Digi Embedded Yocto and addons.
 
     ```
-    $ repo init -u https://github.com/digi-embedded/dey-manifest.git -b thud
+    $ repo init -u https://github.com/Minebea-Intec/nexis-bsp.git -b nexis-thud-gh -m nexis.xml
     $ repo sync -j8 --no-repo-verify
     ```
 
-More information about [Digi Embedded Yocto](https://github.com/digi-embedded/meta-digi).
+4. Build container.
+
+    ```
+    $ (cd sources/meta-addons-nexis/sdk/Docker && ./build.sh)
+    ```
+
+5. Build image and SDK inside container.
+
+    ```
+    $ ./run.sh /home/docker/nexis/cibuild.sh
+    ```
 
 License
 -------
